@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 23-Fev-2023 às 16:33
+-- Tempo de geração: 23-Fev-2023 às 18:55
 -- Versão do servidor: 10.4.21-MariaDB
 -- versão do PHP: 8.0.12
 
@@ -42,9 +42,9 @@ CREATE TABLE `boletins` (
 --
 
 INSERT INTO `boletins` (`id`, `titulo`, `conteudo`, `tipo_aviso`, `nivel_permissao`, `data`, `remetente`) VALUES
-(126, 'Noticia N°1', 'Essa é a notícia de número um publicada por mim', 'noticia, atividades, urgente, duvidas', '0', '2023-02-23', 'Roberto'),
-(127, 'Notícia N°2', 'Essa é a notícia número 2 publicada por mim', 'noticia, atividades, urgente', '2', '2023-02-23', 'Roberto'),
-(128, 'Nótica número 3', 'Essa é a notícia número 3 publicada por mim', 'noticia', '1', '2023-02-23', 'Roberto');
+(130, 'Noticia N°1', 'Essa é a primeira noticia da pagina', 'noticia', '0', '2023-02-23', 'Juan'),
+(131, 'Notícia N°2', 'essa é a segunda noticia da página', 'noticia, atividades, urgente', '0', '2023-02-23', 'Juan'),
+(132, 'Notícia N°2', 'essa é a segunda noticia da página', 'noticia, atividades, urgente', '0', '2023-02-23', 'Juan');
 
 -- --------------------------------------------------------
 
@@ -63,7 +63,9 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `nome`, `permissao`) VALUES
-(21, 'Roberto', 'Diretoria');
+(21, 'Roberto', 'Diretoria'),
+(22, 'teste', 'Funcionário'),
+(23, 'Juan', 'Diretoria');
 
 --
 -- Índices para tabelas despejadas
@@ -89,13 +91,13 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT de tabela `boletins`
 --
 ALTER TABLE `boletins`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=129;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=133;
 
 --
 -- AUTO_INCREMENT de tabela `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
